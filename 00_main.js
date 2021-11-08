@@ -1,17 +1,7 @@
-const readline = require('readline');
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-});
-
-rl.on('line',function(line){
-    const input = line.split(' ');
-    const a = Number(input[0]);
-    const b = Number(input[1]);
-    console.log(a+b);
-    
-    rl.close();
-}).on('close',function(){
-    process.exit();
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', data => {
+    const n = data.split(" ");
+    const a = Number(n[0]), b = Number(n[1]);
+    console.log(a);
+    console.log(b);
 });
